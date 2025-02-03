@@ -1,5 +1,5 @@
 # ece552_wiscProcessor
-Single cycle WISC processor
+WISC-F24 16-bit Pipelined Processor with Cache Memory
 
 
 
