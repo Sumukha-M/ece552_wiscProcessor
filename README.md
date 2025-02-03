@@ -1,2 +1,32 @@
 # ece552_wiscProcessor
 Single cycle WISC processor
+
+
+
+
+
+Team Member 1
+Sumukha Madodi
+Electrical and Computer Engineering, MS Professional
+madodi@wisc.edu
+sumukha266@gmail.com
+
+
+
+
+
+Team Member 2
+Shraddha Singh
+ssingh374@wisc.edu
+shraddha0897@gmail.com
+MS ECE UW Madison
+
+
+
+
+Team Member 3
+Dhruv Singhi
+singhi@wisc.edu
+dhruv.bittal.singhi@gmail.com
+MS ECE UW Madison
+

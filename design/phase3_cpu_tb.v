@@ -1,0 +1,88 @@
+//`timescale 1ns / 1ps
+`include "cpu.v"
+`include "wisc_trace_p3.v"
+// Top-level testbench for ECE 552 cpu.v Phase 2
+module phase3_cpu_tb ();
+  localparam half_cycle = 50;
+
+  // Signals that interface to the DUT.
+  wire [15:0] PC;
+  wire Halt;  /* Halt executed and in Memory or writeback stage */
+  reg clk;  /* Clock input */
+  reg rst;  /* (Active high) Reset input */
+  wire dcache_req, dcache_hit;
+  wire icache_req, icache_hit;
+
+  
+
+  // Instantiate the processor as Design Under Test.
+  cpu DUT (
+      .clk(clk),
+      .rst(rst),
+      .pc (PC),
+      .hlt_sig(Halt)
+  );
+
+    cache_trace_p3 icache_trace_p3 (
+      .clk(clk),
+      .rst(rst),
+      .enable(1'b1),
+      .addr(DUT.imem.i_addr),
+      .stall(DUT.imem.i_stall),
+      .req(icache_req),
+      .hit(icache_hit),
+      .miss(),
+      .halt(DUT.hlt)
+  );
+
+ 
+
+  cache_trace_p3 dcache_trace_p3 (
+      .clk(clk),
+      .rst(rst),
+      .enable(DUT.imem.d_read_en),
+      .addr(DUT.imem.d_addr),
+      .stall(DUT.imem.d_stall),
+      .req(dcache_req),
+      .hit(dcache_hit),
+      .miss(),
+      .halt(DUT.hlt)
+
+  );
+
+  initial begin
+    clk <= 1;
+    forever #half_cycle clk <= ~clk;
+  end
+
+  initial begin
+    rst <= 1;  /* Intial reset state */
+    repeat (3) @(negedge clk);
+    rst <= 0;
+  end
+
+  // Assign internal signals - See wisc_trace_p3.v for instructions.
+  // Edit the example below. You must change the signal names on the right hand side to match your naming convention.
+  wisc_trace_p3 wisc_trace_p3 (
+      .clk(clk),
+      .rst(rst),
+      .PC(PC),
+      .Halt(DUT.hlt_sig),
+      .Inst(DUT.instruction),
+      .RegWrite(DUT.registerfile.write_reg),
+      .WriteRegister(DUT.registerfile.dst_reg),
+      .WriteData(DUT.registerfile.dst_data),
+      .MemRead(DUT.imem.d_read_en & ~DUT.imem.wen),
+      .MemWrite(DUT.imem.d_read_en & DUT.imem.wen),
+      .MemAddress(DUT.imem.d_addr),
+      .MemDataIn(DUT.imem.data_in),
+      .MemDataOut(DUT.imem.d_data_out),
+      .icache_req(icache_req),
+      .icache_hit(icache_hit),
+      .dcache_req(dcache_req),
+      .dcache_hit(dcache_hit)
+  );
+
+  /* Add anything else you want here */
+
+endmodule

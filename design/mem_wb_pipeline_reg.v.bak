@@ -1,0 +1,71 @@
+
+`include "pldff.v"
+module mem_wb_pipeline_reg (
+    //control inputs
+    input clk,
+    input rst,
+    input hlt_ex_mem,
+    input RegWrite_ex_mem,
+    input flag_z_en_ex_mem,
+    input flag_v_en_ex_mem,
+    input flag_n_en_ex_mem,
+    input [1:0] WheretoReg_ex_mem,
+
+    //data inputs
+    input [15:0] pc_next_ex_mem,
+    input [15:0] alu_out_ex_mem,
+    input ovfl_ex_mem,
+    input [3:0]  write_reg_ex_mem,
+    input [15:0] read_data_mem,
+
+    //control outputs
+    output hlt_mem_wb,
+    output RegWrite_mem_wb,
+    output flag_z_en_mem_wb,
+    output flag_v_en_mem_wb,
+    output flag_n_en_mem_wb,
+    output [1:0] WheretoReg_mem_wb,
+
+    //data outputs
+    output [15:0] pc_next_mem_wb,
+    output [15:0] alu_out_mem_wb,
+    output ovfl_mem_wb,
+    output [3:0]  write_reg_mem_wb,
+    output [15:0] read_data_mem_mem_wb
+);
+
+pldff #(.WIDTH(7)) mem_wb_control_pldff(
+    .d({hlt_ex_mem,
+        RegWrite_ex_mem,
+        flag_v_en_ex_mem,
+        flag_z_en_ex_mem,
+        flag_n_en_ex_mem,
+        WheretoReg_ex_mem}),
+    .q({hlt_mem_wb,
+        RegWrite_mem_wb,
+        flag_v_en_mem_wb,
+        flag_z_en_mem_wb,
+        flag_n_en_mem_wb,
+        WheretoReg_mem_wb}),
+    .clk(clk),
+    .rst(rst),
+    .wen(1'b1)
+);
+
+pldff #(.WIDTH(53)) mem_wb_data_pldff(
+    .d({pc_next_ex_mem,
+        alu_out_ex_mem,
+        write_reg_ex_mem,
+        ovfl_ex_mem,
+        read_data_mem}),
+    .q({pc_next_mem_wb,
+        alu_out_mem_wb,
+        write_reg_mem_wb,
+        ovfl_mem_wb,
+        read_data_mem_mem_wb}),
+    .clk(clk),
+    .rst(rst),
+    .wen(1'b1)
+);
+    
+endmodule
