@@ -1,0 +1,275 @@
+/filespace/s/singhi/ECE552/metadata_way_array.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/metadata_way_array.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module dff
+-- Compiling module cache_cell
+-- Compiling module cache_word
+-- Compiling module metadata_way_array
+
+Top level modules:
+	metadata_way_array
+
+} {} {}} /filespace/s/singhi/ECE552/phase3_cpu_tb.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/phase3_cpu_tb.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module cpu
+-- Compiling module wisc_trace_p3
+-- Compiling module phase3_cpu_tb
+
+Top level modules:
+	phase3_cpu_tb
+
+} {} {}} /filespace/s/singhi/ECE552/dff.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/dff.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}} /filespace/s/singhi/ECE552/data_way_array.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/data_way_array.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module dff
+-- Compiling module cache_cell
+-- Compiling module cache_word
+-- Compiling module data_set
+-- Compiling module data_way_array
+
+Top level modules:
+	data_way_array
+
+} {} {}} /filespace/s/singhi/ECE552/memory.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/memory.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} /filespace/s/singhi/ECE552/read_decoder_4_16.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/read_decoder_4_16.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module decoder_3to8
+-- Compiling module read_decoder_4_16
+
+Top level modules:
+	read_decoder_4_16
+
+} {} {}} /filespace/s/singhi/ECE552/forwarding_unit.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/forwarding_unit.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module forwarding_unit
+
+Top level modules:
+	forwarding_unit
+
+} {} {}} /filespace/s/singhi/ECE552/alu.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/alu.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module full_adder_1bit
+-- Compiling module cla_4bit
+-- Compiling module cla_16bit
+-- Compiling module paddsub
+-- Compiling module reduction
+-- Compiling module shifter_3to1
+-- Compiling module alu_16bit
+
+Top level modules:
+	alu_16bit
+
+} {} {}} /filespace/s/singhi/ECE552/cla_4bit.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/cla_4bit.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module full_adder_1bit
+-- Compiling module cla_4bit
+
+Top level modules:
+	cla_4bit
+
+} {} {}} /filespace/s/singhi/ECE552/id_ex_pipeline_reg.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/id_ex_pipeline_reg.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module pldff
+-- Compiling module id_ex_pipeline_reg
+
+Top level modules:
+	id_ex_pipeline_reg
+
+} {} {}} /filespace/s/singhi/ECE552/paddsub.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/paddsub.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module full_adder_1bit
+-- Compiling module cla_4bit
+-- Compiling module paddsub
+
+Top level modules:
+	paddsub
+
+} {} {}} /filespace/s/singhi/ECE552/registerfile.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/registerfile.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module dff
+-- Compiling module bit_cell
+-- Compiling module register
+-- Compiling module decoder_3to8
+-- Compiling module read_decoder_4_16
+-- Compiling module decoder_3to8_2
+-- Compiling module write_decoder_4_16
+-- Compiling module registerfile
+
+Top level modules:
+	registerfile
+
+} {} {}} /filespace/s/singhi/ECE552/register.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/register.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module dff
+-- Compiling module bit_cell
+-- Compiling module register
+
+Top level modules:
+	register
+
+} {} {}} /filespace/s/singhi/ECE552/reduction.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/reduction.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module full_adder_1bit
+-- Compiling module cla_4bit
+-- Compiling module reduction
+
+Top level modules:
+	reduction
+
+} {} {}} /filespace/s/singhi/ECE552/if_id_pipeline_reg.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/if_id_pipeline_reg.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module pldff
+-- Compiling module if_id_pipeline_reg
+
+Top level modules:
+	if_id_pipeline_reg
+
+} {} {}} /filespace/s/singhi/ECE552/cla_16bit.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/cla_16bit.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module full_adder_1bit
+-- Compiling module cla_4bit
+-- Compiling module cla_16bit
+
+Top level modules:
+	cla_16bit
+
+} {} {}} /filespace/s/singhi/ECE552/3to1mux_shifter.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/3to1mux_shifter.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module shifter_3to1
+
+Top level modules:
+	shifter_3to1
+
+} {} {}} /filespace/s/singhi/ECE552/memory_tb.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/memory_tb.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module memory_tb
+
+Top level modules:
+	memory_tb
+
+} {} {}} /filespace/s/singhi/ECE552/wisc_trace_p3.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/wisc_trace_p3.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module wisc_trace_p3
+
+Top level modules:
+	wisc_trace_p3
+
+} {} {}} /filespace/s/singhi/ECE552/hazard_detection_unit.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/hazard_detection_unit.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module hazard_detection_unit
+
+Top level modules:
+	hazard_detection_unit
+
+} {} {}} /filespace/s/singhi/ECE552/cache_word.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/cache_word.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module dff
+-- Compiling module cache_cell
+-- Compiling module cache_word
+
+Top level modules:
+	cache_word
+
+} {} {}} /filespace/s/singhi/ECE552/cpu.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/cpu.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}} /filespace/s/singhi/ECE552/mem_wb_pipeline_reg.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/mem_wb_pipeline_reg.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module pldff
+-- Compiling module mem_wb_pipeline_reg
+
+Top level modules:
+	mem_wb_pipeline_reg
+
+} {} {}} /filespace/s/singhi/ECE552/Global_Control.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/Global_Control.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module Global_Control
+
+Top level modules:
+	Global_Control
+
+} {} {}} /filespace/s/singhi/ECE552/cache_cell.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/cache_cell.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module dff
+-- Compiling module cache_cell
+
+Top level modules:
+	cache_cell
+
+} {} {}} /filespace/s/singhi/ECE552/cache.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/cache.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module cache
+
+Top level modules:
+	cache
+
+} {} {}} /filespace/s/singhi/ECE552/cahce_trace_p3.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/cahce_trace_p3.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module cache_trace_p3
+
+Top level modules:
+	cache_trace_p3
+
+} {} {}} /filespace/s/singhi/ECE552/1-bit_adder.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/1-bit_adder.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module full_adder_1bit
+
+Top level modules:
+	full_adder_1bit
+
+} {} {}} /filespace/s/singhi/ECE552/pldff.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/pldff.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module pldff
+
+Top level modules:
+	pldff
+
+} {} {}} /filespace/s/singhi/ECE552/ex_mem_pipeline_reg.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/ex_mem_pipeline_reg.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module pldff
+-- Compiling module ex_mem_pipeline_reg
+
+Top level modules:
+	ex_mem_pipeline_reg
+
+} {} {}} /filespace/s/singhi/ECE552/data_set.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/data_set.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module dff
+-- Compiling module cache_cell
+-- Compiling module cache_word
+-- Compiling module data_set
+
+Top level modules:
+	data_set
+
+} {} {}} /filespace/s/singhi/ECE552/cache_miss_fsm2.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/cache_miss_fsm2.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module cache_fill_fsm2
+
+Top level modules:
+	cache_fill_fsm2
+
+} {} {}} /filespace/s/singhi/ECE552/bit_cell.v {1 {vlog -work work -vopt -stats=none /filespace/s/singhi/ECE552/bit_cell.v
+QuestaSim vlog 2023.2_1 Compiler 2023.05 May 12 2023
+-- Compiling module dff
+-- Compiling module bit_cell
+
+Top level modules:
+	bit_cell
+
+} {} {}}

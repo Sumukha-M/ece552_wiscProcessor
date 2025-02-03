@@ -1,0 +1,19 @@
+# Current time Sun Dec 15 00:07:18 2024
+# Program = vish
+# Id = "2023.2_1"
+# Version = "2023.05"
+# Date = "May 12 2023"
+# Platform = "linux"
+# 0    0xf7b13666: '<unknown (@0xf7b13666)>'
+# 1    0x08229d5c: '<unknown (@0x8229d5c)>'
+# 2    0x0822b230: 'scan_value + 0x6e0' in '/cae/apps/data/mentor-2023/questasim/linux/vish'
+# 3    0x0822b391: 'wlfScanValue + 0x21' in '/cae/apps/data/mentor-2023/questasim/linux/vish'
+# 4    0x083b4bef: 'wlfCreateConstantValueId + 0x2f' in '/cae/apps/data/mentor-2023/questasim/linux/vish'
+# 5    0x0838e62c: 'wlfiSearch + 0x4bc' in '/cae/apps/data/mentor-2023/questasim/linux/vish'
+# 6    0x083475ee: 'wlfSearchForSignalValue + 0x6e' in '/cae/apps/data/mentor-2023/questasim/linux/vish'
+# 7    0x082ff37c: 'waveRightLeft + 0x41c' in '/cae/apps/data/mentor-2023/questasim/linux/vish'
+# 8    0x08340051: '<unknown (@0x8340051)>'
+# 9    0x08577cea: '<unknown (@0x8577cea)>'
+# 10   0xfffffffb: '<unknown (@0xfffffffb)>'
+# End of Stack Trace
+

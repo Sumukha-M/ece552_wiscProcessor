@@ -1,0 +1,106 @@
+
+`include "pldff.v"
+module id_ex_pipeline_reg (
+    //data
+    input [15:0] pc_next_if_id,
+    input [15:0] read_data1,
+    input [15:0] read_data2,
+    input [3:0] write_reg,
+    input [15:0] sign_ext_immediate,
+
+    ///for forwarding unit
+    input [3:0] read_reg1,
+    input [3:0] read_reg2,
+
+
+
+    //control signals
+    input clk,
+    input rst,
+    input wen,
+    ///////////for resetting only control signals i.e stall
+    input rst_control,
+    input hlt,
+    input ALUSrc,
+    input [3:0] ALUOp,
+    input RegWrite,
+    input MemRead,
+    input MemWrite,
+    input flag_z_en,
+    input flag_v_en,
+    input flag_n_en,
+    input [1:0] WheretoReg,
+
+    //control outputs
+    output hlt_id_ex,
+    output ALUSrc_id_ex,
+    output [3:0] ALUOp_id_ex,
+    output RegWrite_id_ex,
+    output MemRead_id_ex,
+    output MemWrite_id_ex,
+    output flag_z_en_id_ex,
+    output flag_v_en_id_ex,
+    output flag_n_en_id_ex,
+    output [1:0] WheretoReg_id_ex,
+
+    //data outputs
+    output [15:0] pc_next_id_ex,
+    output [15:0] read_data1_id_ex,
+    output [15:0] read_data2_id_ex,
+    output [3:0] write_reg_id_ex,
+    output [15:0] sign_ext_immediate_id_ex,
+
+    //for forwarding unit
+    output [3:0] read_reg1_id_ex,
+    output [3:0] read_reg2_id_ex
+
+);
+
+pldff #(.WIDTH(14)) id_ex_control_pldff(
+    .d({hlt,
+        ALUSrc,
+        ALUOp,
+        RegWrite,
+        MemRead,
+        MemWrite,
+        flag_v_en,
+        flag_z_en,
+        flag_n_en,
+        WheretoReg}),
+    .q({hlt_id_ex,
+        ALUSrc_id_ex,
+        ALUOp_id_ex,
+        RegWrite_id_ex,
+        MemRead_id_ex,
+        MemWrite_id_ex,
+        flag_v_en_id_ex,
+        flag_z_en_id_ex,
+        flag_n_en_id_ex,
+        WheretoReg_id_ex}),
+    .rst(rst | rst_control),
+    .clk(clk),
+    .wen(wen)
+);
+
+pldff #(.WIDTH(76)) id_ex_data_pldff(
+    .d({pc_next_if_id,
+        read_data1,
+        read_data2,
+        write_reg,
+        sign_ext_immediate,
+        read_reg1,
+        read_reg2}),
+    .q({pc_next_id_ex,
+        read_data1_id_ex,
+        read_data2_id_ex,
+        write_reg_id_ex,
+        sign_ext_immediate_id_ex,
+        read_reg1_id_ex,
+        read_reg2_id_ex}),
+    .rst(rst),
+    .clk(clk),
+    .wen(wen)
+    
+);
+  
+endmodule
